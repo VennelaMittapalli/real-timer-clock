@@ -32,3 +32,4 @@ module real_timer(input RST, CLK, output reg [3:0] HRM, HRL, MIN_M, MIN_L, SEC_M
   
 
 endmodule
+
