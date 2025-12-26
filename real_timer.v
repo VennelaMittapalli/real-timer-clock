@@ -1,3 +1,6 @@
+//FORMAT of the Timer is 24 hours
+
+
 module real_timer(input RST, CLK, output reg [3:0] HRM, HRL, MIN_M, MIN_L, SEC_M, SEC_L);
 	always @(posedge CLK or posedge RST) begin
       if(RST) {HRM,HRL,MIN_M,MIN_L,SEC_M,SEC_L} <= 24'h000000;
@@ -27,4 +30,5 @@ module real_timer(input RST, CLK, output reg [3:0] HRM, HRL, MIN_M, MIN_L, SEC_M
 			{SEC_M,SEC_L} <= {SEC_M,SEC_L} + 1;
 		end
   
+
 endmodule
