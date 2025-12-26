@@ -7,11 +7,12 @@ module tb();
 	always #1 CLK = ~CLK;
 
 	initial begin
-		$monitor("%b %b %b %b %b %b", RST,CLK,HRM, HRL, MIN_M, MIN_L, SEC_M, SEC_L);
+		$monitor("%b %b %b %b %b %b",HRM,HRL,MIN_M,MIN_L,SEC_M,SEC_L);
 		RST = 1'b1;
 		#1;
 		RST = 1'b0;
 		#9000;
 		$finish;
        end
+
 endmodule
