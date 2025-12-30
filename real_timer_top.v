@@ -1,11 +1,6 @@
 module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
-
-
     reg [23:0]Tclk=24'd0;
     reg Tclk1;
-    
-   
-    
     
     output [6:0]DIS0,DIS1;
     output reg [3:0]an0,an1;
@@ -13,7 +8,6 @@ module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
     
 	wire [3:0] HRM1,HRL1,MIN_M1,MIN_L1,SEC_M1,SEC_L1;
 
- 
 	reg [3:0]nibble1,nibble0;
 	reg [1:0]count=2'b00;
    always @(posedge CLK) begin
@@ -68,9 +62,6 @@ module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
 	
 	seven_segment sseg1(nibble0,DIS0);
 	seven_segment sseg2(nibble1,DIS1);
-	//seven_segment sseg3(MIN_M1,MIN_M);
-	//seven_segment sseg4(MIN_L1,MIN_L);
-	//seven_segment sseg5(SEC_M1,SEC_M);
-	//seven_segment sseg6(SEC_L1,SEC_L);
-
+	
 endmodule
+
