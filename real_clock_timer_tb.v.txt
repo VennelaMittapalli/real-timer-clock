@@ -1,18 +1,25 @@
 module tb();
-	bit RST,CLK;
-	wire [6:0] HRM, HRL, MIN_M, MIN_L, SEC_M, SEC_L;
+	reg RST;
+	reg CLK=1'b0;
+	wire [6:0] DIS0,DIS1;
+	wire [3:0] an0,an1;
 
-	real_timer_top rtt(RST,CLK,HRM,HRL,MIN_M,MIN_L,SEC_M,SEC_L);
+	real_timer_top rtt(RST,CLK,DIS0,DIS1,an0,an1);
 
 	always #1 CLK = ~CLK;
 
 	initial begin
-		$monitor("%b %b %b %b %b %b",HRM,HRL,MIN_M,MIN_L,SEC_M,SEC_L);
+      $monitor("%b %b %b %b",DIS0,DIS1,an0,an1);
 		RST = 1'b1;
 		#1;
 		RST = 1'b0;
-		#9000;
+		#500;
 		$finish;
        end
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars();
+  end
 
 endmodule
