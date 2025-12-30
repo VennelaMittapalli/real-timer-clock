@@ -4,7 +4,9 @@
 
 
 
-EDA PLAYGROUND OUTPUT
+****************************************************************EDA PLAYGROUND OUTPUT****************************************************************
+
+
 <img width="1856" height="976" alt="image" src="https://github.com/user-attachments/assets/860ea755-4031-4ef6-b74f-da6ceb4d7061" />
 
 
