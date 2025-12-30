@@ -1,5 +1,10 @@
+#Default Clock used here connected to Pin F14
 set_property IOSTANDARD LVCMOS33 [get_ports CLK]
+
+#Switch is used for the Reset Operation
 set_property IOSTANDARD LVCMOS33 [get_ports RST]
+
+#Display 0 Connections to resepctive Pins
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS1[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS1[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS1[4]}]
@@ -8,20 +13,27 @@ set_property IOSTANDARD LVCMOS33 [get_ports {DIS1[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS1[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS1[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[6]}]
+
+#Display 0 Connections to resepctive Pins
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[5]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[4]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {DIS0[0]}]
+
+#Anode Pin connections for Display 0
 set_property IOSTANDARD LVCMOS33 [get_ports {an1[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an1[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an1[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an1[3]}]
+
+#Anode Pin connections for Display 1
 set_property IOSTANDARD LVCMOS33 [get_ports {an0[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an0[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an0[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {an0[3]}]
+
 set_property PACKAGE_PIN F14 [get_ports CLK]
 set_property PACKAGE_PIN V2 [get_ports RST]
 set_property PACKAGE_PIN B5 [get_ports {DIS1[6]}]
