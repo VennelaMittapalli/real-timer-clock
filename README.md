@@ -4,6 +4,8 @@
 
 **************************************************HH MM SS**************************************************
 
+NOTE: At a time one of the Digit is activavted for the Display of the 2 Displays [Display 0 and Display1] each consisting of 4 Digits 
+
 **********************************************************************************************************
 
 
