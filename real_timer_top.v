@@ -10,6 +10,8 @@ module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
 
 	reg [3:0]nibble1,nibble0;
 	reg [1:0]count=2'b00;
+
+	//Counters added for the Frequency Division for the view of output on the Display
 	
     always @(posedge CLK) begin
     if(RST) Tclk <= 24'd0;
@@ -20,7 +22,8 @@ module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
     if(RST) Tclk1 <= 24'd0;
     else Tclk1 <= ~Tclk1;
     end
- 
+
+	//Implementing the Counter of Mod4 or frequency division of 4 for the selection of the Digits of Display
  	always @(posedge Tclk1)
 	count <= count+1;
   
@@ -37,7 +40,7 @@ module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
 	endcase
 	end
 
-	//Always Block for the process of selection of Digit of Display of Hour hand based on counter bit
+	//Always Block for the process of selection of Digit of Display of Hour hand based on counter bit(Frequency division 2 hence bit 0 used]
     always @(*) begin
 	case(count[0])
 	1'b0: an1={1'b1,1'b0,1'b1,1'b1};
@@ -70,5 +73,6 @@ module real_timer_top(RST,CLK,DIS0,DIS1,an0,an1);
 	seven_segment sseg2(nibble1,DIS1);
 	
 endmodule
+
 
 
