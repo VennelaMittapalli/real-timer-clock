@@ -16,10 +16,14 @@ module tb();
 		#500;
 		$finish;
        end
-  
+  /* 
+  // For output display in EDA Playground
+
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars();
   end
+*/
 
 endmodule
+
