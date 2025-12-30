@@ -1,3 +1,6 @@
+**************************************************************FPGA OUTPUT**************************************************************
+
+
 <img width="752" height="481" alt="image" src="https://github.com/user-attachments/assets/9716f82f-c5fe-4b26-a67b-c3b2444e7a1e" />
 
 
