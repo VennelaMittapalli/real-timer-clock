@@ -1,7 +1,10 @@
 module real_timer(input RST, CLK, output reg [3:0] HRM, HRL, MIN_M, MIN_L, SEC_M, SEC_L);
     reg [1:0]clk;
+
+	//Frequency Division is used here for the purpose of Synchronization[Frequency Division by 4]
     always @(posedge CLK) 
     clk <= clk+2'd1;
+	
 	always @(posedge clk[1] or posedge RST) begin
       if(RST) {HRM,HRL,MIN_M,MIN_L,SEC_M,SEC_L} <= 24'h000000;
       else if((SEC_L == 9) & (SEC_M != 5)) begin
@@ -32,5 +35,6 @@ module real_timer(input RST, CLK, output reg [3:0] HRM, HRL, MIN_M, MIN_L, SEC_M
   
 
 endmodule
+
 
 
