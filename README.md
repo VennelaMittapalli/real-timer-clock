@@ -4,6 +4,8 @@
 
 
 
-<img width="1806" height="864" alt="image" src="https://github.com/user-attachments/assets/bbc24d0e-65f5-47ff-a452-8541823bbc6f" />
+EDA PLAYGROUND OUTPUT
+<img width="1856" height="976" alt="image" src="https://github.com/user-attachments/assets/860ea755-4031-4ef6-b74f-da6ceb4d7061" />
+
 
 
