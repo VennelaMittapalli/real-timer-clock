@@ -1,4 +1,7 @@
 module seven_segment(input [3:0]in, output reg [6:0]out);
+
+	//Active Low format is used and the format is Reverse order as digits are from 6:0 Example: Digit 0:{a,b,c,d,e,f}=7'b0000001 is considered as 7'b100000
+	
 	always @(*) begin
 		case(in) 
 		4'b0000: out = 7'b1000000;
@@ -15,3 +18,4 @@ module seven_segment(input [3:0]in, output reg [6:0]out);
 		endcase
 	end
 endmodule
+
