@@ -9,21 +9,22 @@ module tb();
 	always #1 CLK = ~CLK;
 
 	initial begin
-      $monitor("%b %b %b %b",DIS0,DIS1,an0,an1);
+    $monitor("%b %b %b %b",DIS0,DIS1,an0,an1);
 		RST = 1'b1;
 		#1;
 		RST = 1'b0;
 		#500;
 		$finish;
-       end
-  /* 
-  // For output display in EDA Playground
+   end
+ 	 /* 
+  	// For output display in EDA Playground
 
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars();
   end
-*/
+	*/
 
 endmodule
+
 
